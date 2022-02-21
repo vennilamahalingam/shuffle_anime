@@ -1,0 +1,49 @@
+
+<link rel="stylesheet" href="shuffle.css">
+
+<div id="container" class="container">
+
+    <div class="playToWin">
+     
+           PLAY
+       </BR>
+            TO
+    </BR>
+            WIN!
+    </div>
+    <div class="playarea">
+        <img id="cup_1" src = "assets/cup.svg" class="cup1" onClick="failEvent(event)" alt="CUP1"/>
+        <img id="cup_2" src = "assets/cup.svg" class="cup2" onClick="failEvent(event)" alt="CUP2"/>
+        <div id="winEle" class="ticketCont">
+            <img src = "assets/cup.svg"  class="cup3" onClick="winEvent(event)" alt="CUP3"/>
+            <img src = "assets/ticket.svg"  class="ticket" alt="CUP3"/>
+        </div>
+    </div>
+    <div  class="resultCont winningCont" id="winningCont">
+        <div  class="message">
+            You win !
+            <span>
+                Here is your coupon code
+            </span>
+        </div>
+        <div  class="couponCont">
+            <input type="text" value=""/>
+            <div  class="copyButton">COPY</div>
+        </div>
+        <div  class="backButton" onclick="restart()">Back</div>
+    </div>
+    <div  class="resultCont failCont" id="failCont">
+        <div  class="message">
+            Oops!
+            <span>
+               Better luck next time !
+            </span>
+        </div>
+        
+        <div  class="backButton" onclick="restart()">PLAY AGAIN</div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+<script src="shuffle.js" defer></script>
